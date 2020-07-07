@@ -22,7 +22,7 @@ const findAll = async (req, res) => {
     : {};
 
   try {
-    res.send();
+    res.send(condition);
     logger.info(`GET /grade`);
   } catch (error) {
     res

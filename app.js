@@ -12,10 +12,11 @@ import { db } from './models/index.js';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+    
     logger.info('Conectado ao banco de dados');
   } catch (error) {
     logger.error(`Erro ao conectar no banco de dados! ${error}`);
-
+    
     process.exit();
   }
 })();
@@ -27,7 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:3000',
   })
 );
 
@@ -39,4 +40,5 @@ app.get('/', (req, res) => {
 
 app.listen(process.env.PORT || 8081, () => {
   logger.info(`Servidor em execucao na porta ${process.env.PORT}`);
+  
 });

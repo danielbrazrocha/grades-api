@@ -10,6 +10,7 @@
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\app.js",
+      "envFile": "${workspaceFolder}/.env",
       "runtimeArgs": ["--experimental-modules"]
     }
   ]
